@@ -1,17 +1,18 @@
-namespace diamond_kata.tests;
-
-public class DiamondKataTests
+namespace diamond_kata.tests
 {
-    [Fact]
-    public void GenerateDiamond_FirstLetter_ShouldBeA()
+    public class DiamondKataTests
     {
-        // arrange
-        var expectedFirstLetter = 'A';
+        [Fact]
+        public void GenerateDiamond_FirstLetter_ShouldBeA()
+        {
+            // arrange
+            var expectedFirstLetter = 'A';
 
-        // act
-        var actualFirstLetter = 'A'; // to replace with actual GenerateDiamond call
+            // act
+            var actualFirstLetter = DiamondKata.GenerateDiamond('A')[0];
 
-        // assert
-        Assert.Equal(expectedFirstLetter, actualFirstLetter);
+            // assert
+            Assert.Equal(expectedFirstLetter, actualFirstLetter);
+        }
     }
 }
