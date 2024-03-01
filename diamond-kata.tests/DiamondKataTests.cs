@@ -26,5 +26,20 @@ namespace diamond_kata.tests
             // Assert
             Assert.Equal(expectedFirstLetter, actualFirstLetter);
         }
+
+        [Fact]
+        public void GenerateDiamond_WhenCharacterB_SecondRowShouldContainB()
+        {
+            // Arrange
+            var expectedLetter = "B";
+
+            // Act
+            var generateDiamondResult = DiamondKata.GenerateDiamond('B');
+            var indexOfFirstNewLine = generateDiamondResult.IndexOf('\n');
+            var secondLine = generateDiamondResult.Substring(indexOfFirstNewLine + 1);
+
+            // Assert
+            Assert.Contains(expectedLetter, secondLine);
+        }
     }
 }
