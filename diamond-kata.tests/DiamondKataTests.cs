@@ -3,15 +3,27 @@ namespace diamond_kata.tests
     public class DiamondKataTests
     {
         [Fact]
+        public void GenerateDiamond_ShouldNotBeAnEmptyString()
+        {
+            // Arrange
+
+            // Act
+            var generateDiamondResult = DiamondKata.GenerateDiamond('A');
+
+            // Assert
+            Assert.NotEmpty(generateDiamondResult);
+        }
+
+        [Fact]
         public void GenerateDiamond_FirstLetter_ShouldBeA()
         {
-            // arrange
+            // Arrange
             var expectedFirstLetter = 'A';
 
-            // act
+            // Act
             var actualFirstLetter = DiamondKata.GenerateDiamond('A')[0];
 
-            // assert
+            // Assert
             Assert.Equal(expectedFirstLetter, actualFirstLetter);
         }
     }
