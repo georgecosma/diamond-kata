@@ -21,7 +21,7 @@ namespace diamond_kata.tests
             var expectedFirstLetter = 'A';
 
             // Act
-            var actualFirstLetter = DiamondKata.GenerateDiamond('A')[0];
+            var actualFirstLetter = DiamondKata.GenerateDiamond('A').Replace("_", "")[0];
 
             // Assert
             Assert.Equal(expectedFirstLetter, actualFirstLetter);

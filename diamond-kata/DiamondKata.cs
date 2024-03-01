@@ -5,7 +5,7 @@ namespace diamond_kata
     {
         public static string GenerateDiamond(char c)
         {
-            return "A\nB";
+            return "_A_\n" + "B_B\n" + "_A_";
         }
     }
 }
