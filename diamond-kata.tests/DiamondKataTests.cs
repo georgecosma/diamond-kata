@@ -46,7 +46,7 @@ namespace diamond_kata.tests
         public void GenerateDiamond_WhenCharacterB_ReturnExpectedDiamondShape()
         {
             // Arrange
-            var expectedDiamondShape = "_A_\n" + "B_B\n" + "_A_";
+            var expectedDiamondShape = "_A_\r\nB_B\r\n_A_\r\n";
 
             // Act
             var generateDiamondResult = DiamondKata.GenerateDiamond('B');
@@ -63,7 +63,7 @@ namespace diamond_kata.tests
 
             // Act
             var generateDiamondResult = DiamondKata.GenerateDiamond('B');
-            var cleanedResult = generateDiamondResult.Replace("_", "");
+            var cleanedResult = generateDiamondResult.Replace("_", "").Replace("\r\n", "");
             var actualLastLetter = cleanedResult[cleanedResult.Length - 1];
 
             // Assert
@@ -74,10 +74,10 @@ namespace diamond_kata.tests
         public void GenerateDiamond_WhenCharacterC_ReturnExpectedDiamondShape()
         {
             // Arrange
-             var expectedDiamondShape = "__A__\n" + "_B_B_\n" + "C_____C\n" + "_B_B_\n" + "__A__";
+             var expectedDiamondShape = "__A__\r\n_B_B_\r\nC___C\r\n_B_B_\r\n__A__\r\n";
 
             // Act
-            var generateDiamondResult = DiamondKata.GenerateDiamond('B');
+            var generateDiamondResult = DiamondKata.GenerateDiamond('C');
 
             // Assert
             Assert.Equal(expectedDiamondShape, generateDiamondResult);
