@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using diamond_kata;
+
+Console.WriteLine(DiamondKata.GenerateDiamond('B'));
