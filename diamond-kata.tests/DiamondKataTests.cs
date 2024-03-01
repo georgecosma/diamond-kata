@@ -54,5 +54,20 @@ namespace diamond_kata.tests
             // Assert
             Assert.Equal(expectedDiamondShape, generateDiamondResult);
         }
+
+        [Fact]
+        public void GenerateDiamond_WhenCharacterB_LastLetter_ShouldBeA()
+        {
+            // Arrange
+            var expectedLastLetter = 'A';
+
+            // Act
+            var generateDiamondResult = DiamondKata.GenerateDiamond('B');
+            var cleanedResult = generateDiamondResult.Replace("_", "");
+            var actualLastLetter = cleanedResult[cleanedResult.Length - 1];
+
+            // Assert
+            Assert.Equal(expectedLastLetter, actualLastLetter);
+        }
     }
 }
